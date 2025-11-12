@@ -4,6 +4,9 @@ input.onButtonPressed(Button.A, function () {
     timer = seconds
     while (timer > 0) {
         basic.pause(1000)
+        if (timer <= 9) {
+            basic.showString("" + (timer))
+        }
         timer += -1
     }
     seconds = 0
